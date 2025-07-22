@@ -1,0 +1,334 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en-us"
+  dir="ltr"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>KISS and other design principles misconceptions - Alejandro Garcia Serna</title>
+
+  
+  <meta name="theme-color" />
+
+  <meta name="description" content="Over the years, the tech industry has gained experience with practices that are helpful for writing maintainable and evolvable software. However, many of these &ldquo;best practices,&rdquo; design patterns, or design principles are often applied daily in ways far from their authors&rsquo; original intent. They can become dogmatic, used for their own sake or without considering the context in which they are being applied.
+The goal and challenge here are to distance ourselves from dogma, embrace pragmatism, and understand the trade-offs when we decide to build a piece of software in a particular way. Every decision has a consequence, and the accumulation of these consequences can either add or remove complexity and cognitive load from our codebases. This affects our users—who, as we will see in this blog post, are not only the end-users but also other developers and even our future selves." />
+  <meta name="author" content="Alejandro Garcia Serna" /><link rel="preload stylesheet" as="style" href="//localhost:1313/main.min.css" />
+
+  
+  <link rel="preload" as="image" href="//localhost:1313/theme.svg" />
+
+  <link rel="preload" as="image" href="https://avatars.githubusercontent.com/u/21073419?v=4" />
+
+  <link rel="preload" as="image" href="//localhost:1313/twitter.svg" /><link rel="preload" as="image" href="//localhost:1313/github.svg" /><link rel="preload" as="image" href="//localhost:1313/linkedin.svg" />
+
+  <script
+    defer
+    src="//localhost:1313/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+
+  
+  <link
+    rel="icon"
+    href="//localhost:1313/favicon-96x96.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="//localhost:1313/apple-touch-icon.png"
+  />
+
+  <meta name="generator" content="Hugo 0.145.0">
+</head>
+<body
+    class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
+  ><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="//localhost:1313/"
+      >Alejandro Garcia Serna</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"
+  ><nav
+      class="mt-12 flex justify-center space-x-10 lg:mt-0 lg:items-center ltr:lg:ml-14 rtl:space-x-reverse rtl:lg:mr-14 dark:invert"
+    >
+      <a
+        class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/alejogs4"
+        target="_blank"
+        rel="me"
+      >twitter</a>
+      <a
+        class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/alejogs4"
+        target="_blank"
+        rel="me"
+      >github</a>
+      <a
+        class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./linkedin.svg)"
+        href="https://linkedin.com/in/alejandro-garcia-serna-531093156"
+        target="_blank"
+        rel="me"
+      >linkedin</a>
+    </nav>
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><article>
+  <header class="mb-14">
+    <h1 class="my-0! pb-2.5">KISS and other design principles misconceptions</h1><div class="text-xs antialiased opacity-60"><time>Jul 20, 2025</time></div></header>
+
+  <section><p>Over the years, the tech industry has gained experience with practices that are helpful for writing maintainable and evolvable software. However, many of these &ldquo;best practices,&rdquo; design patterns, or design principles are often applied daily in ways far from their authors&rsquo; original intent. They can become dogmatic, used for their own sake or without considering the context in which they are being applied.</p>
+<p>The goal and challenge here are to distance ourselves from dogma, embrace pragmatism, and understand the trade-offs when we decide to build a piece of software in a particular way. Every decision has a consequence, and the accumulation of these consequences can either add or remove complexity and cognitive load from our codebases. This affects our users—who, as we will see in this blog post, are not only the end-users but also other developers and even our future selves.</p>
+<h2 id="keep-it-simple-stupid-kiss">Keep it simple, stupid (KISS)</h2>
+<p>Simplicity is something everyone on a project seeks. It&rsquo;s the desire to grow in features and revenue without suffering slowdowns in productivity and shipping times. In this search for &ldquo;simplicity,&rdquo; we often forget for whom this simplicity is important and what simplicity actually is. To better illustrate this, let&rsquo;s use simplicity&rsquo;s antonym: complexity. A less complex system is, by definition, a simple system, and the opposite means we face a complex or non-simple system. Complexity is a helpful term as it has been widely studied in science and engineering. Specifically, in <a href="https://curtclifton.net/papers/MoseleyMarks06a.pdf">Out of the Tar Pit</a>, the authors of this amazing paper define two classes of complexity: <strong>Essential Complexity</strong> and <strong>Accidental Complexity</strong>.</p>
+<h4 id="essential-complexity">Essential Complexity</h4>
+<p>Some domain problems, and therefore the software for them, are complex by definition. An aircraft system is far more complex than a coffee shop&rsquo;s software. As explained in the paper, essential complexity tells us there is an inherent complexity within the problem we are solving that we cannot escape. Attempting to eliminate this essential complexity is not only impossible but also counterproductive. When we try, we are merely shifting the burden from our implementation to the users. They will have to figure out more on their own to use our software successfully, instead of us, the implementers, figuring it out for them.</p>
+<h4 id="accidental-complexity">Accidental Complexity</h4>
+<p>Some complexity is unavoidable, but what about the kind we can avoid or reduce? That&rsquo;s accidental complexity—the complexity born from <em>how</em> the software is implemented. Whether we rely on global state or use explicit dependencies, have deep inheritance hierarchies, or separate immutable computations from the necessary side effects a system needs to be useful (e.g., Object-Oriented Programming vs. Functional Programming), the goal is the same. The idea behind every programming paradigm, best practice, or design principle is to reduce this accidental complexity so that the system does not become more complex than it needs to be.</p>
+<p>As stated above, complexity is essentially unavoidable. However, if complexity cannot be completely removed, it should be <strong>hidden</strong> from the eyes of the user of that system or piece of functionality. When a customer fills out a form, the entire system might be involved in applying business rules, performing verifications, or writing information. These operations are hidden from the customer because, at that <strong>layer</strong>, those details are irrelevant to what they are trying to achieve. This principle can and should be extrapolated to any layer we are working on in the system. Details relevant at the customer level are different from those at the function level. Truly hiding these details from the user of that layer is what makes a system <em>simple</em>, regardless of whether the implementation is <em>complex</em>—since, as we&rsquo;ve discussed, that complexity might be essential.</p>
+<p>A real-world example of this is how programming languages and their standard libraries handle file system interactions. In NodeJS, reading the content of a <code>.txt</code> file looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">readFile</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;node:fs/promises&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">contents</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">readFile</span>(<span style="color:#e6db74">&#39;./file.txt&#39;</span>, { <span style="color:#a6e22e">encoding</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;utf8&#39;</span> });
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">contents</span>);
+</span></span></code></pre></div><p>What might not be obvious here is that, under the hood, the <code>readFile()</code> function needs to parse the provided path and <em>try</em> to resolve the file in the <em>underlying</em> operating system where the program is running. Additionally, it needs to <em>verify</em> permissions for that file, <em>read</em> its content, and use the second parameter to return the content in the specified encoding (<code>utf8</code> in this case). All of that complexity is encapsulated and hidden behind an easy-to-use interface. The implementation, both on the NodeJS side and in the underlying C++ engine, is as extensive and complex as you can imagine. However, all that complexity is ultimately wrapped beautifully and hidden in an interface where we only have to pass the path of the file we want to consume (the second parameter is optional; a buffer is returned by default).</p>
+<p>In his wonderful book <a href="https://www.amazon.com/Philosophy-Software-Design-2nd/dp/173210221X">A Philosophy of Software Design</a>, John Ousterhout calls these kinds of functions <strong>deep modules</strong>. Deep modules are described as those that provide a lot of functionality through a simple interface. This is what we would also call a <a href="https://refactoring.guru/design-patterns/facade">Facade</a>. So, the next time you&rsquo;re thinking, or a well-intentioned coworker tells you, &ldquo;let&rsquo;s keep it simple,&rdquo; ask yourself (or them): &ldquo;Simple for whom?&rdquo;</p>
+<h2 id="single-responsibility-principle">Single Responsibility Principle</h2>
+<p>The SOLID principles, coined by Robert C. Martin, have been around for a long while, and for just as long, they have been the foundation upon which much of the software design world has been built. The first letter of this acronym, S, stands for the <em>Single Responsibility Principle</em>. This principle states that:</p>
+<blockquote>
+<p>A class should have one and only one reason to change, meaning that a class should have only one job.</p></blockquote>
+<p>In theory, this sounds perfectly reasonable, and it is. However, in practice, where do we draw the line for <code>one thing</code>? This blurry distinction, or a half-understood principle, makes it easy for developers to split the implementation of a given functionality in a way that improves neither clarity nor reusability.</p>
+<p>Here, we have to make it clear that splitting or extracting code into a function, class, or module doesn&rsquo;t automatically make it more reusable. Why? Because code is only reusable if its implementation and signature are abstract enough for the contexts in which it is intended to be used. Let&rsquo;s take the array <code>map</code> function as an example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">squares</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">number</span> =&gt; <span style="color:#a6e22e">number</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">employees</span> <span style="color:#f92672">=</span> [...]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">employesNetSalaries</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">employees</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">employee</span> =&gt; (
+</span></span><span style="display:flex;"><span>    ...<span style="color:#a6e22e">employee</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">salary</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">employee</span>.<span style="color:#a6e22e">salary</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">taxes</span>
+</span></span><span style="display:flex;"><span>))
+</span></span></code></pre></div><p><code>map()</code> is a function that, given an array as an implicit parameter and a function that acts as a mapper or transformer, applies this transformation to each element and returns a new array with the results.</p>
+<p>Here we see a very generic, abstract function that is worth extracting. It makes few assumptions about the context where it&rsquo;s going to be used. The less coupled your abstraction is to the <code>where</code> or <code>how</code> of its usage, the better—that&rsquo;s a good signal it is well-designed. On the contrary, if a function you created can only be used in one place because it is tightly coupled to the context, it might not increase reusability, but it could still add clarity.</p>
+<p>So, to give a clearer explanation of this principle, let&rsquo;s rephrase it as:</p>
+<blockquote>
+<p>A piece of code should have a single goal</p></blockquote>
+<p><code>Goal</code>, rather than <code>thing</code>, is a more concrete term we can use as a heuristic when writing code. We can more easily ask ourselves: <code>What do I want as the outcome of this abstraction?</code> Code splitting can then be done if clarity or reusability is improved. And speaking of reusability&hellip;</p>
+<h2 id="dont-repeat-yourself">Don&rsquo;t Repeat Yourself</h2>
+<p>Code repetition has often been seen as the root of all evil in software development. Repeated or similar code is assumed to be inherently bad. But do you know what can be a worse fate for your codebase? Coupling. So let&rsquo;s talk briefly about it.</p>
+<h3 id="coupling-and-information-leaks">Coupling and Information Leaks</h3>
+<p>How much do two objects know about each other? That&rsquo;s what coupling is all about. If two objects know or are aware of many details about each other, any change in how one object presents itself to the outside world (its API or interface) will ripple to the other. This means more places to modify and more variables to consider when refactoring. On the other hand, if two objects minimize their coupling as much as possible, changes to their internal structures should not leak to their consumers. In his paper <a href="https://dl.acm.org/doi/10.1145/361598.361623">On the Criteria To Be Used in Decomposing Systems into Modules</a>, David Parnas described this as <code>information hiding</code>. How much information is hidden is the criterion to verify a module&rsquo;s modularity, and therefore, the flexibility of the system.</p>
+<p>The fundamental reason for the existence of classic design patterns, besides reusing solutions to common problems and serving as a form of technical communication, is to express relationships among objects. This communication is expressed through their <em>interfaces</em>—the contract they must fit—rather than the specifics of how they are built.</p>
+<blockquote>
+<p>Program based on interfaces, not on concrete implementations</p></blockquote>
+<p>On the other hand, an information leak occurs when an implementation detail is exposed through the abstraction&rsquo;s interface. This means the parameters, the return type, or the way these values are passed or used allows the client code to infer how the abstraction was implemented. This is somewhat unavoidable. Even well-built abstractions, if they solve a non-trivial problem, will likely leak part of their implementation to the outside world. Something as simple as which values are accepted as parameters or what the return type is constitutes information the world knows about our interfaces.</p>
+<p>However, minimizing these kinds of problems is the fundamental job of software engineering. This leakage is problematic because this knowledge of how our software is used creates coupling—coupling we cannot eliminate completely but must strive to minimize. And it is here that some trends in avoiding repetition fail us.</p>
+<p>Imagine the next form component in React:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">UserForm</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">page</span> }) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onSubmit</span>(<span style="color:#a6e22e">values</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">page</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;/signup&#39;</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Add validations for signup
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">page</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;/rating-book&#39;</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Add validations before rate
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">submitUserInfo</span>(<span style="color:#a6e22e">values</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>This component has one major flaw: it is too context-dependent. Depending on where it is called, it behaves differently. This is problematic because any change to one page&rsquo;s implementation can potentially break the other places it&rsquo;s used. This not only makes the component&rsquo;s code harder to maintain and extend but also means we are coupling different pages together. To solve this, let&rsquo;s first use a definition from the world of abstraction:</p>
+<blockquote>
+<p>Abstraction is keeping the fundamental and adding the details</p></blockquote>
+<p>This separation between fundamentals and details—or separating policies from details—is key to building good abstractions. The fundamentals are everything needed to perform the action in its most basic form, and the details are the specializations for each use case. Let&rsquo;s refactor the previous component to understand this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">UserForm</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">isValid</span> }) =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onSubmit</span>(<span style="color:#a6e22e">values</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">isValid</span>(<span style="color:#a6e22e">values</span>)) {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Do something if validation is wrong
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">submitUserInfo</span>(<span style="color:#a6e22e">values</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>This may seem like a simple change, but it demonstrates a fundamental skill in software design: the &ldquo;taste&rdquo; to know what is essential (the policy) and what is a detail. In abstraction design, code repetition is acceptable as long as this repetition keeps the code decoupled. Good software design helps us achieve precisely this.</p>
+<p>Another case is when, in the pursuit of avoiding repetition, we couple two or more parts of our codebase at the information level. This happens when, even though abstractions solve very similar problems, the data they operate on is conceptually different.</p>
+<p>So, whenever you are tempted to extract a function or create a class or component, think carefully about the interface design. Consider how this interface can serve a more abstract or general goal than the original code intended. If a good design isn&rsquo;t obvious, you might need to see more use cases to grasp it. In the meantime, be okay with a bit of repetition.</p>
+<h2 id="yagni-you-arent-gonna-need-it">YAGNI (You aren&rsquo;t gonna need it)</h2>
+<p>By now, it should be clear that the heuristic of hiding details behind a thoughtful interface is a cornerstone of good software design. The YAGNI principle tells us not to implement functionality until we have a clear, immediate need for it. The goal is to avoid building speculative features based on what you think you might need in the future.</p>
+<p>This is sound guidance for avoiding unnecessary complexity. However, it&rsquo;s crucial to remember that we are operating in two distinct fields: the interface and the implementation. When we are told not to over-engineer, making this distinction is vital.</p>
+<p>At the moment of designing and building new functionality, we must develop a clear understanding of the problem at hand. This understanding helps us distinguish between two related aspects:</p>
+<ol>
+<li><strong>What is wanted now (The Implementation)</strong>: This is the concrete code that solves the immediate problem.</li>
+<li><strong>What the problem represents (The Interface)</strong>: This is the abstraction or contract that models the problem domain.</li>
+</ol>
+<p>According to YAGNI, we should only implement what is wanted right now. The number of use cases we&rsquo;ve been exposed to is limited, so trying to build support for unknown and uncertain future scenarios is not only difficult but also provides no guarantee that the work will ever be useful.</p>
+<p>However, we must understand the problem domain well enough to design an interface that can gracefully accommodate both current and likely future needs. Applying YAGNI too aggressively to your interface design is how you put yourself into a corner. <strong>The key is to design for tomorrow, but only implement for today</strong>.</p>
+<p>Let&rsquo;s illustrate this with a common feature: a notification system.</p>
+<p>The first requirement is simple: &ldquo;When a user&rsquo;s subscription is about to expire, send them an email reminder.&rdquo;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// WARNING: Inflexible Interface
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Sends a subscription reminder email to a user.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param {object} user - The user object, e.g., { email: &#39;test@example.com&#39;, name: &#39;Alex&#39; }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param {string} message - The content of the email.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sendEmailReminder</span>(<span style="color:#a6e22e">user</span>, <span style="color:#a6e22e">message</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Connecting to SMTP server...`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Sending email to </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">email</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> with message: &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Complex email sending logic would go here...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Usage
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">currentUser</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;customer@email.com&#39;</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Sam&#39;</span> };
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">sendEmailReminder</span>(<span style="color:#a6e22e">currentUser</span>, <span style="color:#e6db74">&#39;Your subscription is expiring soon!&#39;</span>);
+</span></span></code></pre></div><p>This works perfectly for the current requirement. The problem is that the <strong>interface</strong> (sendEmailReminder) is a dead end. It&rsquo;s tightly coupled to &ldquo;email.&rdquo;</p>
+<p>What happens next month when the product manager says, &ldquo;We also need to send reminders via SMS&rdquo;? You can&rsquo;t use this function or you will have to modify it with the cost that comes with this refactor, this is due to not designing the interface for the future.</p>
+<p>A pragmatic developer understands the problem is &ldquo;sending notifications,&rdquo; not just &ldquo;sending emails.&rdquo;, We will implement a more generic interface but keeping the implementation while keeping email sending as the only one supported</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// A flexible interface with a minimal implementation.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Sends a notification through a specified channel.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param {object} options
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param {string} options.channel - The channel to use (&#39;email&#39;, &#39;sms&#39;, etc.)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param {object} options.recipient - The recipient&#39;s details.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param {string} options.message - The message content.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sendNotification</span>(<span style="color:#a6e22e">options</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">channel</span>, <span style="color:#a6e22e">recipient</span>, <span style="color:#a6e22e">message</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// We use a flexible interface, but only implement what&#39;s needed now.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">channel</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;email&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Connecting to SMTP server...`</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Sending email to </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">recipient</span>.<span style="color:#a6e22e">email</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> with message: &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;`</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Email-specific logic lives here.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// We acknowledge other channels might exist, but we don&#39;t build them.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// YAGNI prevents us from writing the SMS logic until it&#39;s actually required.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;sms&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;push&#39;</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">`Error: Channel &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">channel</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; is not implemented yet.`</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>, <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Not implemented&#39;</span> };
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Usage
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;customer@email.com&#39;</span>, <span style="color:#a6e22e">phone</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;555-1234&#39;</span> };
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">sendNotification</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">channel</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;email&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">recipient</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">user</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Your subscription is expiring soon!&#39;</span>
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p>This approach is superior for several reasons:</p>
+<ul>
+<li><strong>The Interface is Stable</strong>: The sendNotification function and its signature are flexible. When the SMS requirement comes, you don&rsquo;t need to change how the function is called; you just add the logic for the sms case.</li>
+<li><strong>YAGNI is Respected</strong>: We did not build the SMS or push notification systems. We saved that implementation effort until it was actually needed.</li>
+<li><strong>It&rsquo;s Extensible</strong>: The design is &ldquo;open for extension, but closed for modification.&rdquo; We can add new notification channels without modifying the function&rsquo;s contract or the existing email logic.</li>
+</ul>
+<h2 id="conclusion-principles-as-heuristics-not-laws">Conclusion: Principles as Heuristics, Not Laws</h2>
+<p>Throughout this post, we&rsquo;ve explored how well-intentioned principles like KISS, SRP, and DRY can be misapplied when treated as inflexible laws rather than as guiding heuristics. The common thread is the need for pragmatism over dogma.</p>
+<ul>
+<li><strong>KISS</strong> prompts us to ask, &ldquo;Simple for whom?&rdquo; It’s about managing and hiding complexity, not naively avoiding it.</li>
+<li><strong>SRP</strong> is more useful when we think in terms of a single, clear &ldquo;goal&rdquo; for a piece of code, rather than a nebulous &ldquo;thing.&rdquo;</li>
+<li><strong>DRY</strong> warns us that premature or incorrect abstractions can create more problems—like tight coupling—than the duplication they aim to solve.</li>
+<li><strong>YAGNI</strong> teaches us the crucial difference between interface and implementation, urging us to design for tomorrow&rsquo;s plausible needs but only build for today&rsquo;s concrete requirements</li>
+</ul>
+<p>Ultimately, building great software is a game of trade-offs. Every design decision adds or removes cognitive load and complexity. Instead of blindly following a rule, the real challenge is to pause and consider the context. By understanding the deeper goals behind these principles—managing complexity, improving clarity, and reducing coupling—we can make more informed, pragmatic decisions that truly lead to healthier, more maintainable codebases.</p>
+</section>
+
+  </article></main><footer
+  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
+>
+  <div class="mr-auto">&copy;2025
+    <a class="link" href="//localhost:1313/">Alejandro Garcia Serna</a></div>
+</footer> </body>
+</html>

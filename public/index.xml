@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Alejandro Garcia Serna</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content in Home on Alejandro Garcia Serna</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Jul 2025 15:17:55 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KISS and other design principles misconceptions</title>
+      <link>//localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</link>
+      <pubDate>Sat, 19 Jul 2025 15:00:55 +0100</pubDate>
+      <guid>//localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</guid>
+      <description>&lt;p&gt;Over the years, the tech industry has gained experience with practices that are helpful for writing maintainable and evolvable software. However, many of these &amp;ldquo;best practices,&amp;rdquo; design patterns, or design principles are often applied daily in ways far from their authors&amp;rsquo; original intent. They can become dogmatic, used for their own sake or without considering the context in which they are being applied.&lt;/p&gt;&#xA;&lt;p&gt;The goal and challenge here are to distance ourselves from dogma, embrace pragmatism, and understand the trade-offs when we decide to build a piece of software in a particular way. Every decision has a consequence, and the accumulation of these consequences can either add or remove complexity and cognitive load from our codebases. This affects our users—who, as we will see in this blog post, are not only the end-users but also other developers and even our future selves.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
