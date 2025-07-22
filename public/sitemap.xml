@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/</loc>
+    <loc>alejandrogarciaserna.com/</loc>
     <lastmod>2025-07-20T15:17:55+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</loc>
+    <loc>alejandrogarciaserna.com/posts/kiss-and-other-design-principles-misconceptions/</loc>
     <lastmod>2025-07-20T15:17:55+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
+    <loc>alejandrogarciaserna.com/posts/</loc>
     <lastmod>2025-07-20T15:17:55+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>alejandrogarciaserna.com/categories/</loc>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>alejandrogarciaserna.com/tags/</loc>
   </url>
 </urlset>

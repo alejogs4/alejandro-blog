@@ -11,7 +11,7 @@
   style="--bg:#faf8f1"
   lang="en-us"
   dir="ltr"
-><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+><head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta
@@ -27,32 +27,54 @@
 
   <meta name="description" content="Over the years, the tech industry has gained experience with practices that are helpful for writing maintainable and evolvable software. However, many of these &ldquo;best practices,&rdquo; design patterns, or design principles are often applied daily in ways far from their authors&rsquo; original intent. They can become dogmatic, used for their own sake or without considering the context in which they are being applied.
 The goal and challenge here are to distance ourselves from dogma, embrace pragmatism, and understand the trade-offs when we decide to build a piece of software in a particular way. Every decision has a consequence, and the accumulation of these consequences can either add or remove complexity and cognitive load from our codebases. This affects our users—who, as we will see in this blog post, are not only the end-users but also other developers and even our future selves." />
-  <meta name="author" content="Alejandro Garcia Serna" /><link rel="preload stylesheet" as="style" href="//localhost:1313/main.min.css" />
+  <meta name="author" content="Alejandro Garcia Serna" /><link rel="preload stylesheet" as="style" href="alejandrogarciaserna.com/main.min.css" />
 
   
-  <link rel="preload" as="image" href="//localhost:1313/theme.svg" />
+  <link rel="preload" as="image" href="alejandrogarciaserna.com/theme.svg" />
 
   <link rel="preload" as="image" href="https://avatars.githubusercontent.com/u/21073419?v=4" />
 
-  <link rel="preload" as="image" href="//localhost:1313/twitter.svg" /><link rel="preload" as="image" href="//localhost:1313/github.svg" /><link rel="preload" as="image" href="//localhost:1313/linkedin.svg" />
+  <link rel="preload" as="image" href="alejandrogarciaserna.com/twitter.svg" /><link rel="preload" as="image" href="alejandrogarciaserna.com/github.svg" /><link rel="preload" as="image" href="alejandrogarciaserna.com/linkedin.svg" />
 
   <script
     defer
-    src="//localhost:1313/highlight.min.js"
+    src="alejandrogarciaserna.com/highlight.min.js"
     onload="hljs.initHighlightingOnLoad();"
   ></script>
 
   
   <link
     rel="icon"
-    href="//localhost:1313/favicon-96x96.png"
+    href="alejandrogarciaserna.com/favicon-96x96.png"
   />
   <link
     rel="apple-touch-icon"
-    href="//localhost:1313/apple-touch-icon.png"
+    href="alejandrogarciaserna.com/apple-touch-icon.png"
   />
 
   <meta name="generator" content="Hugo 0.145.0">
+  <meta itemprop="name" content="KISS and other design principles misconceptions">
+  <meta itemprop="description" content="Over the years, the tech industry has gained experience with practices that are helpful for writing maintainable and evolvable software. However, many of these “best practices,” design patterns, or design principles are often applied daily in ways far from their authors’ original intent. They can become dogmatic, used for their own sake or without considering the context in which they are being applied.
+The goal and challenge here are to distance ourselves from dogma, embrace pragmatism, and understand the trade-offs when we decide to build a piece of software in a particular way. Every decision has a consequence, and the accumulation of these consequences can either add or remove complexity and cognitive load from our codebases. This affects our users—who, as we will see in this blog post, are not only the end-users but also other developers and even our future selves.">
+  <meta itemprop="datePublished" content="2025-07-19T15:00:55+01:00">
+  <meta itemprop="dateModified" content="2025-07-20T15:17:55+01:00">
+  <meta itemprop="wordCount" content="2945"><meta property="og:url" content="alejandrogarciaserna.com/posts/kiss-and-other-design-principles-misconceptions/">
+  <meta property="og:site_name" content="Alejandro Garcia Serna">
+  <meta property="og:title" content="KISS and other design principles misconceptions">
+  <meta property="og:description" content="Over the years, the tech industry has gained experience with practices that are helpful for writing maintainable and evolvable software. However, many of these “best practices,” design patterns, or design principles are often applied daily in ways far from their authors’ original intent. They can become dogmatic, used for their own sake or without considering the context in which they are being applied.
+The goal and challenge here are to distance ourselves from dogma, embrace pragmatism, and understand the trade-offs when we decide to build a piece of software in a particular way. Every decision has a consequence, and the accumulation of these consequences can either add or remove complexity and cognitive load from our codebases. This affects our users—who, as we will see in this blog post, are not only the end-users but also other developers and even our future selves.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-07-19T15:00:55+01:00">
+    <meta property="article:modified_time" content="2025-07-20T15:17:55+01:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="KISS and other design principles misconceptions">
+  <meta name="twitter:description" content="Over the years, the tech industry has gained experience with practices that are helpful for writing maintainable and evolvable software. However, many of these “best practices,” design patterns, or design principles are often applied daily in ways far from their authors’ original intent. They can become dogmatic, used for their own sake or without considering the context in which they are being applied.
+The goal and challenge here are to distance ourselves from dogma, embrace pragmatism, and understand the trade-offs when we decide to build a piece of software in a particular way. Every decision has a consequence, and the accumulation of these consequences can either add or remove complexity and cognitive load from our codebases. This affects our users—who, as we will see in this blog post, are not only the end-users but also other developers and even our future selves.">
+
+  <link rel="canonical" href="alejandrogarciaserna.com/posts/kiss-and-other-design-principles-misconceptions/" />
 </head>
 <body
     class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
@@ -62,7 +84,7 @@ The goal and challenge here are to distance ourselves from dogma, embrace pragma
   <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
     <a
       class="-translate-y-[1px] text-2xl font-medium"
-      href="//localhost:1313/"
+      href="alejandrogarciaserna.com/"
       >Alejandro Garcia Serna</a
     >
     <div
@@ -329,6 +351,6 @@ The goal and challenge here are to distance ourselves from dogma, embrace pragma
   class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
 >
   <div class="mr-auto">&copy;2025
-    <a class="link" href="//localhost:1313/">Alejandro Garcia Serna</a></div>
+    <a class="link" href="alejandrogarciaserna.com/">Alejandro Garcia Serna</a></div>
 </footer> </body>
 </html>
