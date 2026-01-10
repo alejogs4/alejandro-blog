@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Alejandro Garcia Serna</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Alejandro Garcia Serna</description>
+    <title>Refactoring on Alejandro Garcia Serna</title>
+    <link>http://localhost:1313/tags/refactoring/</link>
+    <description>Recent content in Refactoring on Alejandro Garcia Serna</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jan 2026 14:53:16 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Context is (was always) the king</title>
-      <link>http://localhost:1313/posts/king-context/</link>
-      <pubDate>Sat, 10 Jan 2026 14:53:16 +0100</pubDate>
-      <guid>http://localhost:1313/posts/king-context/</guid>
-      <description>&lt;p&gt;Some years ago one of the tech leads I have respected the most on my career (Hello Yuji) said something that from that moment resulted in a mantra for me:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;For bad software we already have Excel&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;With this he didn&amp;rsquo;t mean Excel was a bad software, it is and it continues being one of the most incredible pieces of software ever written however most of what we build even for serious projects is not even close to this level of refinenment, uselfulness and robustness but why this happens? why our industry even with the most potent tools ever conceived it seems to always fail to build software products that even just justify its own existance? let&amp;rsquo;s talk about &lt;strong&gt;communication&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Sun, 20 Jul 2025 15:17:55 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/refactoring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>KISS and other design principles misconceptions</title>
       <link>http://localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</link>

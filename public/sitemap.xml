@@ -2,20 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/</loc>
+    <loc>http://localhost:1313/tags/communication/</loc>
     <lastmod>2026-01-10T14:53:16+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/king-context/</loc>
+    <loc>http://localhost:1313/posts/king-context/</loc>
     <lastmod>2026-01-10T14:53:16+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/tags/culture/</loc>
     <lastmod>2026-01-10T14:53:16+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</loc>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-01-10T14:53:16+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-01-10T14:53:16+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/soft-skills/</loc>
+    <lastmod>2026-01-10T14:53:16+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-01-10T14:53:16+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/architecture/</loc>
     <lastmod>2025-07-20T15:17:55+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/tags/best-practices/</loc>
+    <lastmod>2025-07-20T15:17:55+01:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</loc>
+    <lastmod>2025-07-20T15:17:55+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/refactoring/</loc>
+    <lastmod>2025-07-20T15:17:55+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/software-design/</loc>
+    <lastmod>2025-07-20T15:17:55+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>
