@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>alejandrogarciaserna.com/</loc>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2026-01-10T14:53:16+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/king-context/</loc>
+    <lastmod>2026-01-10T14:53:16+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/</loc>
+    <lastmod>2026-01-10T14:53:16+01:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</loc>
     <lastmod>2025-07-20T15:17:55+01:00</lastmod>
   </url><url>
-    <loc>alejandrogarciaserna.com/posts/kiss-and-other-design-principles-misconceptions/</loc>
-    <lastmod>2025-07-20T15:17:55+01:00</lastmod>
+    <loc>//localhost:1313/categories/</loc>
   </url><url>
-    <loc>alejandrogarciaserna.com/posts/</loc>
-    <lastmod>2025-07-20T15:17:55+01:00</lastmod>
-  </url><url>
-    <loc>alejandrogarciaserna.com/categories/</loc>
-  </url><url>
-    <loc>alejandrogarciaserna.com/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>

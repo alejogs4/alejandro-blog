@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Alejandro Garcia Serna</title>
-    <link>alejandrogarciaserna.com/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content in Home on Alejandro Garcia Serna</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Jul 2025 15:17:55 +0100</lastBuildDate>
-    <atom:link href="alejandrogarciaserna.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Jan 2026 14:53:16 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Context is (was always) the king</title>
+      <link>//localhost:1313/posts/king-context/</link>
+      <pubDate>Sat, 10 Jan 2026 14:53:16 +0100</pubDate>
+      <guid>//localhost:1313/posts/king-context/</guid>
+      <description>&lt;p&gt;Some years ago one of the tech leads I have respected the most on my career (Hello Yuji) said something that from that moment resulted in a mantra for me:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;For bad software we already have Excel&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;With this he didn&amp;rsquo;t mean Excel was a bad software, it is and it continues being one of the most incredible pieces of software ever written however most of what we build even for serious projects is not even close to this level of refinenment, uselfulness and robustness but why this happens? why our industry even with the most potent tools ever conceived it seems to always fail to build software products that even just justify its own existance? let&amp;rsquo;s talk about &lt;strong&gt;communication&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>KISS and other design principles misconceptions</title>
-      <link>alejandrogarciaserna.com/posts/kiss-and-other-design-principles-misconceptions/</link>
+      <link>//localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</link>
       <pubDate>Sat, 19 Jul 2025 15:00:55 +0100</pubDate>
-      <guid>alejandrogarciaserna.com/posts/kiss-and-other-design-principles-misconceptions/</guid>
+      <guid>//localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</guid>
       <description>&lt;p&gt;Over the years, the tech industry has gained experience with practices that are helpful for writing maintainable and evolvable software. However, many of these &amp;ldquo;best practices,&amp;rdquo; design patterns, or design principles are often applied daily in ways far from their authors&amp;rsquo; original intent. They can become dogmatic, used for their own sake or without considering the context in which they are being applied.&lt;/p&gt;&#xA;&lt;p&gt;The goal and challenge here are to distance ourselves from dogma, embrace pragmatism, and understand the trade-offs when we decide to build a piece of software in a particular way. Every decision has a consequence, and the accumulation of these consequences can either add or remove complexity and cognitive load from our codebases. This affects our users—who, as we will see in this blog post, are not only the end-users but also other developers and even our future selves.&lt;/p&gt;</description>
     </item>
   </channel>
