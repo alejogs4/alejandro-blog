@@ -3,6 +3,8 @@ date = '2025-07-20T15:17:55+01:00'
 draft = false
 title = 'KISS and other design principles misconceptions'
 publishDate = '2025-07-19T15:00:55+01:00'
+description = "A pragmatic look at software design principles like KISS, SRP, and DRY, exploring how they are often misunderstood and how to apply them effectively."
+tags = ["software-design", "architecture", "best-practices", "refactoring"]
 +++
 
 Over the years, the tech industry has gained experience with practices that are helpful for writing maintainable and evolvable software. However, many of these "best practices," design patterns, or design principles are often applied daily in ways far from their authors' original intent. They can become dogmatic, used for their own sake or without considering the context in which they are being applied.

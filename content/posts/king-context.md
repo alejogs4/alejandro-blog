@@ -2,6 +2,8 @@
 date = '2026-01-10T14:53:16+01:00'
 draft = true
 title = 'Context is (was always) the king'
+description = "Why effective communication and context are critical for building successful software products, and how the 'broken telephone' effect impacts development."
+tags = ["communication", "culture", "soft-skills"]
 +++
 
 Some years ago one of the tech leads I have respected the most on my career (Hello Yuji) said something that from that moment resulted in a mantra for me:
