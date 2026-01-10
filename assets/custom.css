@@ -43,3 +43,31 @@
     gap: 3rem;
     /* 48px */
 }
+
+/* Dark mode improvements for share buttons and tags */
+.dark .group svg {
+    fill: currentColor;
+}
+
+.dark .group:hover svg {
+    opacity: 1;
+}
+
+/* Fix dark mode button backgrounds and text colors */
+.dark article footer a,
+.dark article .flex.justify-center a {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark article footer a:hover,
+.dark article .flex.justify-center a:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Ensure SVG icons are visible in dark mode */
+.dark article .flex.justify-center a svg {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
