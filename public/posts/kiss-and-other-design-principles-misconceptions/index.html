@@ -39,7 +39,7 @@ The goal and challenge here are to distance ourselves from dogma, embrace pragma
     <link rel="icon" href="http://localhost:1313/favicon-96x96.png" />
     <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
 
-    <meta name="generator" content="Hugo 0.145.0">
+    <meta name="generator" content="Hugo 0.154.3">
 </head><body
     class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
   ><header
@@ -161,7 +161,8 @@ The goal and challenge here are to distance ourselves from dogma, embrace pragma
 <h2 id="single-responsibility-principle">Single Responsibility Principle</h2>
 <p>The SOLID principles, coined by Robert C. Martin, have been around for a long while, and for just as long, they have been the foundation upon which much of the software design world has been built. The first letter of this acronym, S, stands for the <em>Single Responsibility Principle</em>. This principle states that:</p>
 <blockquote>
-<p>A class should have one and only one reason to change, meaning that a class should have only one job.</p></blockquote>
+<p>A class should have one and only one reason to change, meaning that a class should have only one job.</p>
+</blockquote>
 <p>In theory, this sounds perfectly reasonable, and it is. However, in practice, where do we draw the line for <code>one thing</code>? This blurry distinction, or a half-understood principle, makes it easy for developers to split the implementation of a given functionality in a way that improves neither clarity nor reusability.</p>
 <p>Here, we have to make it clear that splitting or extracting code into a function, class, or module doesn&rsquo;t automatically make it more reusable. Why? Because code is only reusable if its implementation and signature are abstract enough for the contexts in which it is intended to be used. Let&rsquo;s take the array <code>map</code> function as an example:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">6</span>]
@@ -176,7 +177,8 @@ The goal and challenge here are to distance ourselves from dogma, embrace pragma
 <p>Here we see a very generic, abstract function that is worth extracting. It makes few assumptions about the context where it&rsquo;s going to be used. The less coupled your abstraction is to the <code>where</code> or <code>how</code> of its usage, the better—that&rsquo;s a good signal it is well-designed. On the contrary, if a function you created can only be used in one place because it is tightly coupled to the context, it might not increase reusability, but it could still add clarity.</p>
 <p>So, to give a clearer explanation of this principle, let&rsquo;s rephrase it as:</p>
 <blockquote>
-<p>A piece of code should have a single goal</p></blockquote>
+<p>A piece of code should have a single goal</p>
+</blockquote>
 <p><code>Goal</code>, rather than <code>thing</code>, is a more concrete term we can use as a heuristic when writing code. We can more easily ask ourselves: <code>What do I want as the outcome of this abstraction?</code> Code splitting can then be done if clarity or reusability is improved. And speaking of reusability&hellip;</p>
 <h2 id="dont-repeat-yourself">Don&rsquo;t Repeat Yourself</h2>
 <p>Code repetition has often been seen as the root of all evil in software development. Repeated or similar code is assumed to be inherently bad. But do you know what can be a worse fate for your codebase? Coupling. So let&rsquo;s talk briefly about it.</p>
@@ -184,44 +186,46 @@ The goal and challenge here are to distance ourselves from dogma, embrace pragma
 <p>How much do two objects know about each other? That&rsquo;s what coupling is all about. If two objects know or are aware of many details about each other, any change in how one object presents itself to the outside world (its API or interface) will ripple to the other. This means more places to modify and more variables to consider when refactoring. On the other hand, if two objects minimize their coupling as much as possible, changes to their internal structures should not leak to their consumers. In his paper <a href="https://dl.acm.org/doi/10.1145/361598.361623">On the Criteria To Be Used in Decomposing Systems into Modules</a>, David Parnas described this as <code>information hiding</code>. How much information is hidden is the criterion to verify a module&rsquo;s modularity, and therefore, the flexibility of the system.</p>
 <p>The fundamental reason for the existence of classic design patterns, besides reusing solutions to common problems and serving as a form of technical communication, is to express relationships among objects. This communication is expressed through their <em>interfaces</em>—the contract they must fit—rather than the specifics of how they are built.</p>
 <blockquote>
-<p>Program based on interfaces, not on concrete implementations</p></blockquote>
+<p>Program based on interfaces, not on concrete implementations</p>
+</blockquote>
 <p>On the other hand, an information leak occurs when an implementation detail is exposed through the abstraction&rsquo;s interface. This means the parameters, the return type, or the way these values are passed or used allows the client code to infer how the abstraction was implemented. This is somewhat unavoidable. Even well-built abstractions, if they solve a non-trivial problem, will likely leak part of their implementation to the outside world. Something as simple as which values are accepted as parameters or what the return type is constitutes information the world knows about our interfaces.</p>
 <p>However, minimizing these kinds of problems is the fundamental job of software engineering. This leakage is problematic because this knowledge of how our software is used creates coupling—coupling we cannot eliminate completely but must strive to minimize. And it is here that some trends in avoiding repetition fail us.</p>
 <p>Imagine the next form component in React:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">UserForm</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">page</span> }) =&gt; {
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">//...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onSubmit</span>(<span style="color:#a6e22e">values</span>) {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onSubmit</span>(<span style="color:#a6e22e">values</span>) {
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">page</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;/signup&#39;</span>) {
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">page</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;/signup&#39;</span>) {
 </span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Add validations for signup
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">page</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;/rating-book&#39;</span>) {
 </span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Add validations before rate
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">submitUserInfo</span>(<span style="color:#a6e22e">values</span>)
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">submitUserInfo</span>(<span style="color:#a6e22e">values</span>)
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">//...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>This component has one major flaw: it is too context-dependent. Depending on where it is called, it behaves differently. This is problematic because any change to one page&rsquo;s implementation can potentially break the other places it&rsquo;s used. This not only makes the component&rsquo;s code harder to maintain and extend but also means we are coupling different pages together. To solve this, let&rsquo;s first use a definition from the world of abstraction:</p>
 <blockquote>
-<p>Abstraction is keeping the fundamental and adding the details</p></blockquote>
+<p>Abstraction is keeping the fundamental and adding the details</p>
+</blockquote>
 <p>This separation between fundamentals and details—or separating policies from details—is key to building good abstractions. The fundamentals are everything needed to perform the action in its most basic form, and the details are the specializations for each use case. Let&rsquo;s refactor the previous component to understand this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">UserForm</span> <span style="color:#f92672">=</span> ({ <span style="color:#a6e22e">isValid</span> }) =&gt; {
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">//...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onSubmit</span>(<span style="color:#a6e22e">values</span>) {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">onSubmit</span>(<span style="color:#a6e22e">values</span>) {
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">isValid</span>(<span style="color:#a6e22e">values</span>)) {
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">isValid</span>(<span style="color:#a6e22e">values</span>)) {
 </span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Do something if validation is wrong
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
+</span></span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">submitUserInfo</span>(<span style="color:#a6e22e">values</span>)
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">submitUserInfo</span>(<span style="color:#a6e22e">values</span>)
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">//...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>This may seem like a simple change, but it demonstrates a fundamental skill in software design: the &ldquo;taste&rdquo; to know what is essential (the policy) and what is a detail. In abstraction design, code repetition is acceptable as long as this repetition keeps the code decoupled. Good software design helps us achieve precisely this.</p>
 <p>Another case is when, in the pursuit of avoiding repetition, we couple two or more parts of our codebase at the information level. This happens when, even though abstractions solve very similar problems, the data they operate on is conceptually different.</p>
 <p>So, whenever you are tempted to extract a function or create a class or component, think carefully about the interface design. Consider how this interface can serve a more abstract or general goal than the original code intended. If a good design isn&rsquo;t obvious, you might need to see more use cases to grasp it. In the meantime, be okay with a bit of repetition.</p>
@@ -238,7 +242,7 @@ The goal and challenge here are to distance ourselves from dogma, embrace pragma
 <p>Let&rsquo;s illustrate this with a common feature: a notification system.</p>
 <p>The first requirement is simple: &ldquo;When a user&rsquo;s subscription is about to expire, send them an email reminder.&rdquo;</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// WARNING: Inflexible Interface
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">/**
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Sends a subscription reminder email to a user.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param {object} user - The user object, e.g., { email: &#39;test@example.com&#39;, name: &#39;Alex&#39; }
@@ -248,17 +252,17 @@ The goal and challenge here are to distance ourselves from dogma, embrace pragma
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Connecting to SMTP server...`</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Sending email to </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">user</span>.<span style="color:#a6e22e">email</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> with message: &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;`</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Complex email sending logic would go here...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// Usage
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">currentUser</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;customer@email.com&#39;</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Sam&#39;</span> };
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">currentUser</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;customer@email.com&#39;</span>, <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Sam&#39;</span> };
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">sendEmailReminder</span>(<span style="color:#a6e22e">currentUser</span>, <span style="color:#e6db74">&#39;Your subscription is expiring soon!&#39;</span>);
 </span></span></code></pre></div><p>This works perfectly for the current requirement. The problem is that the <strong>interface</strong> (sendEmailReminder) is a dead end. It&rsquo;s tightly coupled to &ldquo;email.&rdquo;</p>
 <p>What happens next month when the product manager says, &ldquo;We also need to send reminders via SMS&rdquo;? You can&rsquo;t use this function or you will have to modify it with the cost that comes with this refactor, this is due to not designing the interface for the future.</p>
 <p>A pragmatic developer understands the problem is &ldquo;sending notifications,&rdquo; not just &ldquo;sending emails.&rdquo;, We will implement a more generic interface but keeping the implementation while keeping email sending as the only one supported</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// A flexible interface with a minimal implementation.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">/**
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * Sends a notification through a specified channel.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * @param {object} options
@@ -270,16 +274,16 @@ The goal and challenge here are to distance ourselves from dogma, embrace pragma
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">channel</span>, <span style="color:#a6e22e">recipient</span>, <span style="color:#a6e22e">message</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// We use a flexible interface, but only implement what&#39;s needed now.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">channel</span>) {
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">channel</span>) {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;email&#39;</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Connecting to SMTP server...`</span>);
 </span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Sending email to </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">recipient</span>.<span style="color:#a6e22e">email</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> with message: &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">message</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;`</span>);
 </span></span><span style="display:flex;"><span>            <span style="color:#75715e">// Email-specific logic lives here.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
+</span></span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">success</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> };
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// We acknowledge other channels might exist, but we don&#39;t build them.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// YAGNI prevents us from writing the SMS logic until it&#39;s actually required.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;sms&#39;</span><span style="color:#f92672">:</span>
+</span></span></span><span style="display:flex;"><span>        <span style="color:#75715e">// YAGNI prevents us from writing the SMS logic until it&#39;s actually required.
+</span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;sms&#39;</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;push&#39;</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
 </span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">`Error: Channel &#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">channel</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34; is not implemented yet.`</span>);
@@ -288,7 +292,7 @@ The goal and challenge here are to distance ourselves from dogma, embrace pragma
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// Usage
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;customer@email.com&#39;</span>, <span style="color:#a6e22e">phone</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;555-1234&#39;</span> };
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">email</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;customer@email.com&#39;</span>, <span style="color:#a6e22e">phone</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;555-1234&#39;</span> };
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">await</span> <span style="color:#a6e22e">sendNotification</span>({
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">channel</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;email&#39;</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">recipient</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">user</span>,

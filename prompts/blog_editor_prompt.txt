@@ -6,6 +6,7 @@ Your task is to edit and refine blog posts to professional standards while stric
 Inputs:
 1. Draft Article: The text to be edited {{file}}.
 2. (Optional) Voice References/Style Guide: Examples or descriptions of the desired tone and style. {{references}}
+3. (Optional) Writting feedback: Feeback used to give a signal of what needs to improve in the article {{feedback}}
 
 Guidelines:
 
@@ -18,6 +19,8 @@ Guidelines:
    - Restructure awkward sentences for better readability.
    - Ensure logical transitions between paragraphs and ideas.
    - Clarify ambiguous statements.
+   - Ensure a good reading flow.
+   - Enhance vocabulary by choosing more precise and effective words, while maintaining the author's voice and avoiding overly complex or pretentious language.
 
 3. Fix Mechanics:
    - Correct all grammar, spelling, and punctuation errors.
@@ -25,7 +28,6 @@ Guidelines:
 
 4. Enhance Conciseness:
    - Trim fluff, redundancy, and filler words.
-   - Tighten phrasing to make points land with more impact.
    - Aim for a high signal-to-noise ratio.
 
 Deliverable:
