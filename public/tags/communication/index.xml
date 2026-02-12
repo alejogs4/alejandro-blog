@@ -6,14 +6,14 @@
     <description>Recent content in Communication on Alejandro Garcia Serna</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jan 2026 14:53:16 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 16 Jan 2026 14:53:16 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/communication/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Context is (was always) the king</title>
       <link>http://localhost:1313/posts/king-context/</link>
-      <pubDate>Sat, 10 Jan 2026 14:53:16 +0100</pubDate>
+      <pubDate>Fri, 16 Jan 2026 14:53:16 +0100</pubDate>
       <guid>http://localhost:1313/posts/king-context/</guid>
-      <description>&lt;p&gt;Some years ago one of the tech leads I have respected most in my career said something that became a mantra for me:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;For bad software we already have Excel&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;With this he didn&amp;rsquo;t mean Excel was bad software—it is and it continues to be one of the most incredible pieces of software ever written. However, most of what we build even for serious projects is not even close to this level of refinement, usefulness, and robustness. Why does this happen? Why does our industry, even with the most potent tools ever conceived, seem always to fail to build software products that even just justify their own existence? Let&amp;rsquo;s talk about &lt;strong&gt;communication&lt;/strong&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Some years ago, a tech lead I deeply respect said something that became my mantra:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;For bad software we already have Excel&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;He didn&amp;rsquo;t mean Excel was bad software; on the contrary, it remains one of the most incredible, refined, and robust tools ever written. His point was that most of what we build, even for &amp;ldquo;serious&amp;rdquo; projects, doesn&amp;rsquo;t come close to that level of usefulness. Why? Why does our industry, despite having the most potent tools ever conceived, so often fail to build products that justify their own existence?&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

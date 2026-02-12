@@ -1,7 +1,7 @@
 +++
 date = '2026-02-07T20:24:57+01:00'
 draft = true
-title = 'Love what you used to hate'
+title = 'On learning new things'
 +++
 
  My whole life I have been good on learning new things, normally I can quickly grab new concepts and apply them so this ability gets absorbed faster on my brain however despite being or at least considered myself a quick learner it is almost unavoidable sometimes to overstimate how hard some stuff are really to learn. I hope you know what I am talking about, that subject or knowledge domain that seems too daunting or for some past bad experiences you feel you will never learn and that internal talking it is both dangerous for your own growth and most of the time a false narrative.
@@ -17,3 +17,9 @@ title = 'Love what you used to hate'
  ## Break down and compose
 
 The complexity of the subjects comes from its **whole**. Most of human domains knowledge are the composition of different principles, concepts and techniques which as a its whole represent complexity mostly from how many parts are involved and the interaction between them, here it is where we stumble, on this paralisis of seeing the giant wave in front of us, on seeing the giant task that this learning endevour represent instead of taking a pause and tackle this complexity **locally**, divide the problem in their individual parts, figuring them out individually and see how they make sense together, tackling it this way makes the undertanding way easier since you don't hold the whole complexity in your brain at once and as an adition the effort to understand the components and their composition points makes the understandind deeper.
+
+On software and mathematics this is widely known. We have been always said to divide problems in easier to tackle sub problems, solve them each of them individually and finally compose these sub-solutions in an entire solution, done this way not for the sake of phisical and computing performance sometimes all the opposite but done because humans have a limited context window similar to what a LLM have, we cannot easily grasp everything at once since learning topics have not yet form all the neuronal connections that would make its complete understanding easier.
+
+## Build vocabulary
+
+Once I had a conversation with my flatmate (Hello Mai), she specializes on [coaching parents](https://www.mailensteinbrenner.com/) on how consiously raise emotional stable and resilient kids, this from the mutual respect thus psicology it is a common conversation topic at home. Something she said to me once it's that people from older generations despite feeling something did not have the enough vocabulary to describe how they were feeling, what name put to this pressure on the chest thus in the same way we cannot describe how we feel if we don't know the words to describe it, we cannot understand a topic if the most basic vocabulary related to this topic it is unkwon for us, when working with software knowing what a variable it's or what object means in a given context. Knowing the domain vocabulary gives you the building blocks to comprenhed faster what it is being said to y
