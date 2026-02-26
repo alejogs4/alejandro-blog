@@ -1,7 +1,9 @@
 +++
-date = '2026-02-27T20:24:57+01:00'
+date = '2026-02-26T20:24:57+01:00'
 draft = false
 title = 'On learning new things'
+description = "Practical strategies for overcoming learning barriers: building vocabulary, breaking down complexity, and focusing on transferable knowledge over tool-specific skills."
+tags = ["learning", "career", "soft-skills", "self-improvement"]
 +++
 
  Throughout my life, I’ve always been good at learning new things. Usually, I can quickly grasp new concepts and apply them, allowing the knowledge to click relatively fast. However, despite being—or at least considering myself—a quick learner, it is almost unavoidable to sometimes overestimate how hard some subjects truly are. I hope you know the feeling: that subject or domain that seems too daunting, or perhaps a past bad experience that makes you feel you’ll never master it. That internal monologue is both dangerous for your growth and, most of the time, a false narrative.
