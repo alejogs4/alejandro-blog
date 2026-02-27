@@ -18,7 +18,7 @@ tags = ["learning", "career", "soft-skills", "self-improvement"]
 
  ## Build vocabulary
 
-I once had a conversation with my flatmate (Hello Mai), who specializes in [coaching parents](https://www.mailensteinbrenner.com/) on how to consciously raise emotionally stable and resilient kids. Because of our mutual respect, psychology is a common conversation topic at home. Something she told me once is that people from older generations often felt something but didn't have the vocabulary to describe it—they didn't know what name to put to that pressure in their chest.
+I once had a conversation with my flatmate (Hello Mai), who specializes in [coaching parents](https://www.mailensteinbrenner.com/) on how to consciously raise emotionally stable and resilient kids. You can imagine that psychology is a common conversation topic at home. Something she told me once is that people from older generations often felt something but didn't have the vocabulary to describe it—they didn't know what name to put to that pressure in their chest.
 
 In the same way that we cannot describe how we feel if we don't have the words, we cannot understand a topic if its basic vocabulary is unknown to us. When working with software, you must know what a "variable" is or what an "object" means in a given context. Knowing the domain vocabulary gives you the building blocks to comprehend information faster. From that foundation, you can go deeper into the domain, taking advantage of semantic knowledge as a base to learn something new.
 
