@@ -1,0 +1,193 @@
+<!doctype html>
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg:#faf8f1"
+  lang="en-us"
+  dir="ltr"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    
+    <title>Think to really stay on the loop - Alejandro Garcia Serna</title>
+
+    
+    <meta name="theme-color" />
+
+    <meta name="description"
+        content="It’s 13:00 PM and you are about to go for lunch, you have shipped 3-4 PRs to your integration branch, the same amount of PRs you would have shipped on half week …" />
+    <meta name="author" content="Alejandro Garcia Serna" /><link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
+
+    
+    <link rel="preload" as="image" href="http://localhost:1313/theme.svg" />
+
+    <link rel="preload" as="image" href="https://avatars.githubusercontent.com/u/21073419?v=4" />
+
+    <link rel="preload" as="image" href="http://localhost:1313/twitter.svg" /><link rel="preload" as="image" href="http://localhost:1313/github.svg" /><link rel="preload" as="image" href="http://localhost:1313/linkedin.svg" />
+
+    <script defer src="http://localhost:1313/highlight.min.js" onload="hljs.initHighlightingOnLoad();"></script>
+
+    
+    <link rel="icon" href="http://localhost:1313/favicon-96x96.png" />
+    <link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png" />
+
+    <meta name="generator" content="Hugo 0.164.0">
+</head><body
+    class="bg-(--bg) text-black antialiased duration-200 ease-out [-webkit-tap-highlight-color:transparent] dark:text-white"
+  ><header
+  class="mx-auto flex h-[4.5rem] max-w-(--w) px-8 whitespace-nowrap lg:justify-center"
+>
+  <div class="relative z-50 flex items-center ltr:mr-auto rtl:ml-auto">
+    <a
+      class="-translate-y-[1px] text-2xl font-medium"
+      href="http://localhost:1313/"
+      >Alejandro Garcia Serna</a
+    >
+    <div
+      class="btn-dark text-[0px] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.svg)_left_center/cover_no-repeat] dark:invert dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden ltr:-mr-8 rtl:-ml-8"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#faf8f1'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full flex-col justify-center bg-(--bg) pb-16 duration-200 select-none lg:static lg:h-auto lg:flex-row lg:bg-transparent! lg:pb-0 lg:transition-none"
+  ><nav
+      class="mt-12 flex justify-center space-x-10 lg:mt-0 lg:items-center ltr:lg:ml-14 rtl:space-x-reverse rtl:lg:mr-14 dark:invert"
+    >
+      <a
+        class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./twitter.svg)"
+        href="https://twitter.com/alejogs4"
+        target="_blank"
+        rel="me"
+      >twitter</a>
+      <a
+        class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./github.svg)"
+        href="https://github.com/alejogs4"
+        target="_blank"
+        rel="me"
+      >github</a>
+      <a
+        class="h-7 w-7 text-[0px] [background:var(--url)_center_center/cover_no-repeat] lg:h-6 lg:w-6"
+        style="--url: url(./linkedin.svg)"
+        href="https://linkedin.com/in/alejandro-garcia-serna-531093156"
+        target="_blank"
+        rel="me"
+      >linkedin</a>
+    </nav>
+  </div>
+</header>
+<main
+      class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
+    ><article>
+    <header class="mb-14">
+        <h1 class="my-0! pb-2.5">Think to really stay on the loop</h1><div class="text-xs antialiased opacity-60"><time>Sep 26, 2026</time></div></header>
+
+    <section><p>It&rsquo;s 13:00 PM and you are about to go for lunch, you have shipped 3-4 PRs to your integration branch, the same amount of PRs you would have shipped on half week work just two years ago. When you come back of a hopefully satisfying delicious meal a coworker text you through slack asking you:</p>
+<blockquote>
+<p>Hey! How is it going? I was just wondering what does it mean this block of code you merged in the morning, time for a quick chat?</p>
+</blockquote>
+<p>You enter the meeting, see the line of code and you swallow saliva when you see that those lines of code means almost nothing to you, you don&rsquo;t comprenhend them but even worse you don&rsquo;t grasp the intention behind them. And all of this due to what? Due to the fact that those lines were created without you being in the loop.</p>
+<h2 id="software-an-output-of-comprenhension">Software: An output of comprenhension</h2>
+<p>A couple of years ago this scenario until certain extend was very unlikely to happen since velocity on writing was still at humans levels, by hand you were typing the code and as consequence of writing you were hopefully breaking down the problem in front of you and little by little polishing the uncertainties on code. However we live in a very different world now, a world where overly confident AI models and minds wire up to delegate its thinking combined can produce the whole code based on unclarified assumptions and comprenhension holes and software has always been about comprenhend the business domain, the problem you are solving and communicating in software terms the solution to that problem.</p>
+<p>In the old world (old just because we move at madness speed) this comprenhension was harmed due to unclear requirements also due to the normal learning process where an engineer is learning about the domain he is working on, domain in which the engineer at the start it is not an expert (if it&rsquo;s your first financial project, odds are you are not an expert on finance). However the human speed that one that delays projects gave the needed mental room to understand the domain and the requirements at hand. Fortunately we are not on those times anymore.</p>
+<h2 id="ai-cognitive-surrender">AI Cognitive surrender</h2>
+<h2 id="think-plan-and-then-implement">Think, plan and then implement</h2>
+</section>
+
+    
+    <div class="mt-16 border-t border-black/10 pt-10 dark:border-white/20">
+        <p class="mb-6 text-center text-sm font-medium uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
+            Share this article</p>
+        <div class="flex justify-center gap-12">
+            <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/posts/think-plan-then-implement/&text=Think%20to%20really%20stay%20on%20the%20loop" target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-1 rounded-lg border border-black/10 bg-white px-8 py-4 text-base font-medium text-neutral-700 shadow-sm transition-all hover:border-black/20 hover:shadow-md dark:border-white/20 dark:bg-white/10 dark:text-neutral-200 dark:hover:border-white/30 dark:hover:bg-white/15">
+                <svg class="h-6 w-6 fill-current text-neutral-700 transition-opacity group-hover:opacity-100 dark:text-neutral-200"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                <span>Tweet</span>
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=http://localhost:1313/posts/think-plan-then-implement/" target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-1 rounded-lg border border-black/10 bg-white px-8 py-4 text-base font-medium text-neutral-700 shadow-sm transition-all hover:border-[#0077b5]/50 hover:shadow-md dark:border-white/20 dark:bg-white/10 dark:text-neutral-200 dark:hover:border-[#0077b5]/50 dark:hover:bg-white/15">
+                <svg class="h-6 w-6 fill-current text-neutral-700 transition-opacity group-hover:opacity-100 group-hover:text-[#0077b5] dark:text-neutral-200 dark:group-hover:text-[#0077b5]"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                <span>Share</span>
+            </a>
+        </div>
+    </div>
+
+    <nav
+        class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"><a class="justify-end pl-3 ltr:ml-auto rtl:mr-auto" href="http://localhost:1313/posts/on-learning-new-things/"><span>On learning new things</span><span
+                class="ltr:ml-1.5 rtl:mr-1.5">→</span></a></nav></article></main><footer
+  class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
+>
+  <div class="mr-auto">&copy;2026
+    <a class="link" href="http://localhost:1313/">Alejandro Garcia Serna</a></div>
+</footer> </body>
+</html>

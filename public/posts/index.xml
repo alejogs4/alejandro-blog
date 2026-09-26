@@ -1,33 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on Alejandro Garcia Serna</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Alejandro Garcia Serna</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 07 Feb 2026 20:24:57 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>On learning new things</title>
-      <link>http://localhost:1313/posts/on-learning-new-things/</link>
-      <pubDate>Sat, 07 Feb 2026 20:24:57 +0100</pubDate>
-      <guid>http://localhost:1313/posts/on-learning-new-things/</guid>
-      <description>&lt;p&gt;My whole life I have been good on learning new things, normally I can quickly grab new concepts and apply them so this ability gets absorbed faster on my brain however despite being or at least considered myself a quick learner it is almost unavoidable sometimes to overstimate how hard some stuff are really to learn. I hope you know what I am talking about, that subject or knowledge domain that seems too daunting or for some past bad experiences you feel you will never learn and that internal talking it is both dangerous for your own growth and most of the time a false narrative.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Context is (was always) the king</title>
-      <link>http://localhost:1313/posts/king-context/</link>
-      <pubDate>Fri, 16 Jan 2026 14:53:16 +0100</pubDate>
-      <guid>http://localhost:1313/posts/king-context/</guid>
-      <description>&lt;p&gt;Some years ago, a tech lead I deeply respect said something that became my mantra:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;For bad software we already have Excel&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;He didn&amp;rsquo;t mean Excel was bad software; on the contrary, it remains one of the most incredible, refined, and robust tools ever written. His point was that most of what we build, even for &amp;ldquo;serious&amp;rdquo; projects, doesn&amp;rsquo;t come close to that level of usefulness. Why? Why does our industry, despite having the most potent tools ever conceived, so often fail to build products that justify their own existence?&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>KISS and other design principles misconceptions</title>
-      <link>http://localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</link>
-      <pubDate>Sat, 19 Jul 2025 15:00:55 +0100</pubDate>
-      <guid>http://localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</guid>
-      <description>&lt;p&gt;Over the years, the tech industry has gained experience with practices that are helpful for writing maintainable and evolvable software. However, many of these &amp;ldquo;best practices,&amp;rdquo; design patterns, or design principles are often applied daily in ways far from their authors&amp;rsquo; original intent. They can become dogmatic, used for their own sake or without considering the context in which they are being applied.&lt;/p&gt;&#xA;&lt;p&gt;The goal and challenge here are to distance ourselves from dogma, embrace pragmatism, and understand the trade-offs when we decide to build a piece of software in a particular way. Every decision has a consequence, and the accumulation of these consequences can either add or remove complexity and cognitive load from our codebases. This affects our users—who, as we will see in this blog post, are not only the end-users but also other developers and even our future selves.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Posts on Alejandro Garcia Serna</title>
+		<link>http://localhost:1313/posts/</link>
+		<description>Recent content in Posts on Alejandro Garcia Serna</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 26 Sep 2026 19:38:01 +0200</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Think to really stay on the loop</title>
+				<link>http://localhost:1313/posts/think-plan-then-implement/</link>
+				<pubDate>Sat, 26 Sep 2026 19:38:01 +0200</pubDate>
+				<guid>http://localhost:1313/posts/think-plan-then-implement/</guid>
+				<description>&lt;p&gt;It&amp;rsquo;s 13:00 PM and you are about to go for lunch, you have shipped 3-4 PRs to your integration branch, the same amount of PRs you would have shipped on half week work just two years ago. When you come back of a hopefully satisfying delicious meal a coworker text you through slack asking you:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Hey! How is it going? I was just wondering what does it mean this block of code you merged in the morning, time for a quick chat?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>On learning new things</title>
+				<link>http://localhost:1313/posts/on-learning-new-things/</link>
+				<pubDate>Thu, 26 Feb 2026 20:24:57 +0100</pubDate>
+				<guid>http://localhost:1313/posts/on-learning-new-things/</guid>
+				<description>&lt;p&gt;Throughout my life, I’ve always been good at learning new things. Usually, I can quickly grasp new concepts and apply them, allowing the knowledge to click relatively fast. However, despite being—or at least considering myself—a quick learner, it is almost unavoidable to sometimes overestimate how hard some subjects truly are. I hope you know the feeling: that subject or domain that seems too daunting, or perhaps a past bad experience that makes you feel you’ll never master it. That internal monologue is both dangerous for your growth and, most of the time, a false narrative.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Context is (was always) the king</title>
+				<link>http://localhost:1313/posts/king-context/</link>
+				<pubDate>Fri, 16 Jan 2026 14:53:16 +0100</pubDate>
+				<guid>http://localhost:1313/posts/king-context/</guid>
+				<description>&lt;p&gt;Some years ago, a tech lead I deeply respect said something that became my mantra:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;For bad software we already have Excel&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;He didn&amp;rsquo;t mean Excel was bad software; on the contrary, it remains one of the most incredible, refined, and robust tools ever written. His point was that most of what we build, even for &amp;ldquo;serious&amp;rdquo; projects, doesn&amp;rsquo;t come close to that level of usefulness. Why? Why does our industry, despite having the most potent tools ever conceived, so often fail to build products that justify their own existence?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>KISS and other design principles misconceptions</title>
+				<link>http://localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</link>
+				<pubDate>Sat, 19 Jul 2025 15:00:55 +0100</pubDate>
+				<guid>http://localhost:1313/posts/kiss-and-other-design-principles-misconceptions/</guid>
+				<description>&lt;p&gt;Over the years, the tech industry has gained experience with practices that are helpful for writing maintainable and evolvable software. However, many of these &amp;ldquo;best practices,&amp;rdquo; design patterns, or design principles are often applied daily in ways far from their authors&amp;rsquo; original intent. They can become dogmatic, used for their own sake or without considering the context in which they are being applied.&lt;/p&gt;&#xA;&lt;p&gt;The goal and challenge here are to distance ourselves from dogma, embrace pragmatism, and understand the trade-offs when we decide to build a piece of software in a particular way. Every decision has a consequence, and the accumulation of these consequences can either add or remove complexity and cognitive load from our codebases. This affects our users—who, as we will see in this blog post, are not only the end-users but also other developers and even our future selves.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

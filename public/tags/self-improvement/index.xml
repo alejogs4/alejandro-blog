@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Self-Improvement on Alejandro Garcia Serna</title>
+		<link>http://localhost:1313/tags/self-improvement/</link>
+		<description>Recent content in Self-Improvement on Alejandro Garcia Serna</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 26 Feb 2026 20:24:57 +0100</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/self-improvement/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>On learning new things</title>
+				<link>http://localhost:1313/posts/on-learning-new-things/</link>
+				<pubDate>Thu, 26 Feb 2026 20:24:57 +0100</pubDate>
+				<guid>http://localhost:1313/posts/on-learning-new-things/</guid>
+				<description>&lt;p&gt;Throughout my life, I’ve always been good at learning new things. Usually, I can quickly grasp new concepts and apply them, allowing the knowledge to click relatively fast. However, despite being—or at least considering myself—a quick learner, it is almost unavoidable to sometimes overestimate how hard some subjects truly are. I hope you know the feeling: that subject or domain that seems too daunting, or perhaps a past bad experience that makes you feel you’ll never master it. That internal monologue is both dangerous for your growth and, most of the time, a false narrative.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
