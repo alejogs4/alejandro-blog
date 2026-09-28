@@ -10,15 +10,15 @@
 		
 		
 		
-			<lastBuildDate>Sat, 26 Sep 2026 19:38:01 +0200</lastBuildDate>
+			<lastBuildDate>Mon, 28 Sep 2026 22:38:01 +0200</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Think to really stay on the loop</title>
+				<title>Thinking: How to really stay in the loop</title>
 				<link>http://localhost:1313/posts/think-plan-then-implement/</link>
-				<pubDate>Sat, 26 Sep 2026 19:38:01 +0200</pubDate>
+				<pubDate>Mon, 28 Sep 2026 22:38:01 +0200</pubDate>
 				<guid>http://localhost:1313/posts/think-plan-then-implement/</guid>
-				<description>&lt;p&gt;It&amp;rsquo;s 13:00 PM and you are about to go for lunch, you have shipped 3-4 PRs to your integration branch, the same amount of PRs you would have shipped on half week work just two years ago. When you come back of a hopefully satisfying delicious meal a coworker text you through slack asking you:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Hey! How is it going? I was just wondering what does it mean this block of code you merged in the morning, time for a quick chat?&lt;/p&gt;</description>
+				<description>&lt;p&gt;It&amp;rsquo;s 1:00 PM and you are about to go to lunch. You&amp;rsquo;ve already shipped three or four PRs to your integration branch the same volume of work that would have done half a week just two years ago. When you return from a satisfying meal, a coworker text you on Slack:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Hey! How&amp;rsquo;s it going? I was just wondering what this block of code you merged this morning is doing. Time for a quick chat?&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>On learning new things</title>

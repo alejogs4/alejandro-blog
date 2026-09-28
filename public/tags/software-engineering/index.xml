@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Software-Engineering on Alejandro Garcia Serna</title>
+		<link>http://localhost:1313/tags/software-engineering/</link>
+		<description>Recent content in Software-Engineering on Alejandro Garcia Serna</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 26 Sep 2026 19:38:01 +0200</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Think, plan, then implement: How to really stay in the loop</title>
+				<link>http://localhost:1313/posts/think-plan-then-implement/</link>
+				<pubDate>Sat, 26 Sep 2026 19:38:01 +0200</pubDate>
+				<guid>http://localhost:1313/posts/think-plan-then-implement/</guid>
+				<description>&lt;p&gt;It&amp;rsquo;s 1:00 PM and you are about to head to lunch. You&amp;rsquo;ve already shipped three or four PRs to your integration branch—the same volume of work that would have taken half a week just two years ago. When you return from a satisfying meal, a coworker pings you on Slack:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Hey! How&amp;rsquo;s it going? I was just wondering what this block of code you merged this morning is doing. Time for a quick chat?&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

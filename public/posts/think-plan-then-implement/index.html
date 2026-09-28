@@ -17,13 +17,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     
-    <title>Think to really stay on the loop - Alejandro Garcia Serna</title>
+    <title>Thinking: How to really stay in the loop - Alejandro Garcia Serna</title>
 
     
     <meta name="theme-color" />
 
     <meta name="description"
-        content="It’s 13:00 PM and you are about to go for lunch, you have shipped 3-4 PRs to your integration branch, the same amount of PRs you would have shipped on half week …" />
+        content="Blind AI code generation leads to &#39;AI Cognitive Surrender&#39;, and how a disciplined Think-Plan-Implement workflow keeps software engineers in control." />
     <meta name="author" content="Alejandro Garcia Serna" /><link rel="preload stylesheet" as="style" href="http://localhost:1313/main.min.css" />
 
     
@@ -140,18 +140,52 @@
       class="prose prose-neutral dark:prose-invert relative mx-auto min-h-[calc(100vh-9rem)] max-w-(--w) px-8 pt-14 pb-16"
     ><article>
     <header class="mb-14">
-        <h1 class="my-0! pb-2.5">Think to really stay on the loop</h1><div class="text-xs antialiased opacity-60"><time>Sep 26, 2026</time></div></header>
+        <h1 class="my-0! pb-2.5">Thinking: How to really stay in the loop</h1><div class="text-xs antialiased opacity-60"><time>Sep 28, 2026</time></div></header>
 
-    <section><p>It&rsquo;s 13:00 PM and you are about to go for lunch, you have shipped 3-4 PRs to your integration branch, the same amount of PRs you would have shipped on half week work just two years ago. When you come back of a hopefully satisfying delicious meal a coworker text you through slack asking you:</p>
+    <section><p>It&rsquo;s 1:00 PM and you are about to go to lunch. You&rsquo;ve already shipped three or four PRs to your integration branch the same volume of work that would have done half a week just two years ago. When you return from a satisfying meal, a coworker text you on Slack:</p>
 <blockquote>
-<p>Hey! How is it going? I was just wondering what does it mean this block of code you merged in the morning, time for a quick chat?</p>
+<p>Hey! How&rsquo;s it going? I was just wondering what this block of code you merged this morning is doing. Time for a quick chat?</p>
 </blockquote>
-<p>You enter the meeting, see the line of code and you swallow saliva when you see that those lines of code means almost nothing to you, you don&rsquo;t comprenhend them but even worse you don&rsquo;t grasp the intention behind them. And all of this due to what? Due to the fact that those lines were created without you being in the loop.</p>
-<h2 id="software-an-output-of-comprenhension">Software: An output of comprenhension</h2>
-<p>A couple of years ago this scenario until certain extend was very unlikely to happen since velocity on writing was still at humans levels, by hand you were typing the code and as consequence of writing you were hopefully breaking down the problem in front of you and little by little polishing the uncertainties on code. However we live in a very different world now, a world where overly confident AI models and minds wire up to delegate its thinking combined can produce the whole code based on unclarified assumptions and comprenhension holes and software has always been about comprenhend the business domain, the problem you are solving and communicating in software terms the solution to that problem.</p>
-<p>In the old world (old just because we move at madness speed) this comprenhension was harmed due to unclear requirements also due to the normal learning process where an engineer is learning about the domain he is working on, domain in which the engineer at the start it is not an expert (if it&rsquo;s your first financial project, odds are you are not an expert on finance). However the human speed that one that delays projects gave the needed mental room to understand the domain and the requirements at hand. Fortunately we are not on those times anymore.</p>
-<h2 id="ai-cognitive-surrender">AI Cognitive surrender</h2>
-<h2 id="think-plan-and-then-implement">Think, plan and then implement</h2>
+<p>You join the call, stare at the lines of code on your screen, and swallow hard. Those lines mean almost nothing to you. You don&rsquo;t understand them, and worse, you don&rsquo;t grasp the intention behind them.</p>
+<p>And why did this happen? Because that code was generated and merged without you ever truly being in the loop.</p>
+<h2 id="software-an-output-of-comprehension">Software: An output of comprehension</h2>
+<p>A couple of years ago, this scenario was virtually impossible. Our velocity was limited by human typing speed. Writing code by hand forced us to sit with the problem, breaking down uncertainties line by line.</p>
+<p>Today, we live in a very different world. A world where overly confident models paired with developers lazy enough to offload their critical thinking can produce entire codebases based on assumptions and comprehension gaps. However software has never been about coded lines, it has always been about comprehending the business domain, understanding the problem at hand, and communicating that solution in software terms.</p>
+<p>In the past which only feels distant because of the madness pace of this industry, comprehension suffered from ambiguous requirements or the steep learning curve of a new domain (if it&rsquo;s your first financial project, you&rsquo;re obviously not a financial expert on your first day). But human typing speed, despite being one of the bottlenecks that delayed projects, gave our brains the needed breathing room to absorb domain rules and technical constraints.</p>
+<p>We are no longer limited by typing speed. And even though that sounds like pure progress, it has introduced a trap.</p>
+<h2 id="ai-cognitive-surrender">AI Cognitive Surrender</h2>
+<p>I love coding. I have been writing software for more than a decade, but what I love even more is the feeling of a solved problem. Being more specific <strong>me solving</strong> the problem. That creative satisfaction is a common trait that every engineer who is genuinely passionate about their craft can relate.</p>
+<p>How you define that <code>craft</code> shapes how you experience these times. If your craft was writing code by hand, these are unsatifying times. Coding by hand is no longer what we are paid for, <a href="https://alejandrogarciaserna.com/posts/king-context/">maybe it never was</a> even if it was a satisfying, rewarding part of our job.</p>
+<p>Historically, our industry relied on code writing as the vehicle to fill gaps in understanding. Despite proven practices like domain modeling, design docs, or TDD as a design tool, most engineers worked through uncertainties only when their <a href="https://www.lucasfcosta.com/blog/design-docs">fingers hit the keyboard</a>. When we jump to AI without adapting that mental process, we fall into <strong>AI Cognitive Surrender</strong>.</p>
+<p>AI Cognitive Surrender is the habit of letting tools &ldquo;get the job done&rdquo; without grasping what that output actually does neither at a high architectural level nor at a low implementation level. It is born out of pressure and an identity crisis that over rely on coding as the main skill a software engineer had.</p>
+<p>It’s the familiar &ldquo;Claude told me this&rdquo; syndrome: pasting tickets into prompts and copying generated solutions into pull requests without knowing the <strong>why</strong>, the <strong>how</strong>, or even the <strong>what</strong>. We go back into the old &ldquo;code monkey&rdquo; pattern. Without a shift in how we work, our careers risk becoming passive and boring.</p>
+<p>So what is the cure? We must <strong>think</strong>.</p>
+<h2 id="think-plan-and-then-implement">Think, plan, and then implement</h2>
+<p>We are still learning how to work alongside these models. But the goal is clear: <a href="https://www.lucasfcosta.com/blog/backpressure-is-all-you-need">keep the engineer firmly in the loop while retaining the speed advantages AI offers</a>.</p>
+<p>To build software that remains comprehensible and maintainable, any sustainable methodology requires three distinct phases:</p>
+<ul>
+<li><strong>A thinking phase</strong> to dissect the problem, clarify domain invariants, and eliminate ambiguity.</li>
+<li><strong>A planning phase</strong> to structure tasks into a clear blueprint lives in a markdown file, an issue tracker or in our context windows.</li>
+<li><strong>An implementation phase</strong> governed by deterministic guardrails that verify the changes meet our architectural and quality standards.</li>
+</ul>
+<p>Whether you practice Spec-Driven Development (SDD) or adopt <a href="https://www.youtube.com/watch?v=M6mYodf0dJM">skills and workflows like the ones Matt Pocock shared</a>, you need these three steps.</p>
+<h3 id="1-think">1. Think</h3>
+<p>We are in the AI era, so let AI help you explore the problem. Before writing code, use AI to visualize uncertainties through text, diagrams, or architectural queries. <a href="https://github.com/alejogs4/personal-skills/blob/main/think/SKILL.md">You can use custom prompts, thinking skills</a>, or tools like Matt Pocock’s <code>grill-me</code> skill to challenge your assumptions.</p>
+<p>Use whatever helps you build a solid mental model: sketch diagrams, list edge cases, or discuss domain invariants. The goal is to deeply grasp the desired behavioral outcome before any code is generated.</p>
+<p>This matters because while we may spend less time typing by hand, <strong>code quality matters more than ever</strong>. AI can generate syntactically convincing code at superhuman speeds, but it has no innate understanding of operational trade-offs, security invariants, or domain nuances. Understanding the purpose and constraints of your solution is what separates you from solving a problem yourself or delegating your own thinking.</p>
+<h3 id="2-plan">2. Plan</h3>
+<p>Tools like Antigravity have just introduced dedicated plan modes. Some might view planning as overhead or a relic of older (funny enough that by old we mean early this year) times. But planning isn&rsquo;t just about feeding context to the model; <strong>planning is for us</strong>.</p>
+<p>A plan provides a concise, inspectable blueprint of the work about to be performed. It bridges the high-level intent from our thinking session with the low-level execution steps.</p>
+<p>Once formulated, this plan can be saved in a markdown file, tracked in Linear, or passed to a dedicated implementer agent with a clean context window.</p>
+<h3 id="3-implement">3. Implement</h3>
+<p>This is where determinism becomes non negotiable.</p>
+<p>Once you have a plan, implementation must be constrained by strict feedback loops:</p>
+<ul>
+<li><strong>Automated test oracles (TDD)</strong>: Test-Driven Development shines brighter than ever with AI. Giving an agent a failing test provides an deterministic expectation. The agent iterates until the test turns green, ensuring the behavioral requirement is actually met and reduce the odd of a hallucinated answer.</li>
+<li><strong>Static analysis and compiler checks</strong>: Strict type checking and linters catch API mismatches, undefined variables, and broken contracts instantly.</li>
+<li><strong>Structural inspection</strong>: Because the plan broke down the implementation into discrete chunks, reviewing the resulting pull request is no longer an overwhelming wall of unknown code. You review against specific requirements and verified assertions.</li>
+</ul>
+<p>It is 14:25. If you adopt this Think, Plan, Implement you won&rsquo;t just ship faster than you did a year ago. You will understand your codebases more deeply, master your business domain, and evolve into an engineer who truly gets the <strong>why</strong> behind every technical decision.</p>
 </section>
 
     
@@ -159,7 +193,7 @@
         <p class="mb-6 text-center text-sm font-medium uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
             Share this article</p>
         <div class="flex justify-center gap-12">
-            <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/posts/think-plan-then-implement/&text=Think%20to%20really%20stay%20on%20the%20loop" target="_blank"
+            <a href="https://twitter.com/intent/tweet?url=http://localhost:1313/posts/think-plan-then-implement/&text=Thinking%3a%20How%20to%20really%20stay%20in%20the%20loop" target="_blank"
                 rel="noopener noreferrer"
                 class="group flex items-center gap-1 rounded-lg border border-black/10 bg-white px-8 py-4 text-base font-medium text-neutral-700 shadow-sm transition-all hover:border-black/20 hover:shadow-md dark:border-white/20 dark:bg-white/10 dark:text-neutral-200 dark:hover:border-white/30 dark:hover:bg-white/15">
                 <svg class="h-6 w-6 fill-current text-neutral-700 transition-opacity group-hover:opacity-100 dark:text-neutral-200"
@@ -182,7 +216,11 @@
         </div>
     </div>
 
-    <nav
+    <footer class="mt-14 flex flex-wrap justify-center gap-6"><a class="rounded-full border border-black/10 bg-white px-5 py-2 text-sm font-medium text-neutral-600 no-underline shadow-sm transition-all hover:border-black/20 hover:shadow-md dark:border-white/20 dark:bg-white/10 dark:text-neutral-200 dark:hover:border-white/30 dark:hover:bg-white/15"
+            href="http://localhost:1313/tags/ai">#ai</a><a class="rounded-full border border-black/10 bg-white px-5 py-2 text-sm font-medium text-neutral-600 no-underline shadow-sm transition-all hover:border-black/20 hover:shadow-md dark:border-white/20 dark:bg-white/10 dark:text-neutral-200 dark:hover:border-white/30 dark:hover:bg-white/15"
+            href="http://localhost:1313/tags/architecture">#architecture</a><a class="rounded-full border border-black/10 bg-white px-5 py-2 text-sm font-medium text-neutral-600 no-underline shadow-sm transition-all hover:border-black/20 hover:shadow-md dark:border-white/20 dark:bg-white/10 dark:text-neutral-200 dark:hover:border-white/30 dark:hover:bg-white/15"
+            href="http://localhost:1313/tags/software-engineering">#software-engineering</a><a class="rounded-full border border-black/10 bg-white px-5 py-2 text-sm font-medium text-neutral-600 no-underline shadow-sm transition-all hover:border-black/20 hover:shadow-md dark:border-white/20 dark:bg-white/10 dark:text-neutral-200 dark:hover:border-white/30 dark:hover:bg-white/15"
+            href="http://localhost:1313/tags/workflow">#workflow</a></footer><nav
         class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg leading-[1.2]! *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"><a class="justify-end pl-3 ltr:ml-auto rtl:mr-auto" href="http://localhost:1313/posts/on-learning-new-things/"><span>On learning new things</span><span
                 class="ltr:ml-1.5 rtl:mr-1.5">→</span></a></nav></article></main><footer
   class="mx-auto flex h-[4.5rem] max-w-(--w) items-center px-8 text-xs tracking-wider uppercase opacity-60"
