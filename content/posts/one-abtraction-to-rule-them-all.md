@@ -5,7 +5,7 @@ title = 'One Abstraction to Rule Them All'
 description = "Why strong abstractions and codebase conventions reduce LLM slop and help both humans and AI agents express intent more clearly."
 tags = ["ai", "software-design", "architecture", "software-engineering"]
 +++
-This year, our industry shifted its paradigms. We've gone through an almost overnight renaissance as AI agents make our day-to-day look very different from what we used to do. Still, what used to be true before that isn't anymore? We keep losing ourselves in the `details`.
+This year, our industry shifted its paradigms. We've gone through an almost overnight renaissance as AI agents make our day-to-day look very different from what we used to do. Still, what used to be true before that is still true? We keep losing ourselves in the `details`.
 
 > "The devil is in the details."
 > — Grandmas around the world
