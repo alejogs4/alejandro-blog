@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 28 Sep 2026 22:38:01 +0200</lastBuildDate>
+			<lastBuildDate>Wed, 04 Nov 2026 19:33:10 +0100</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>One Abstraction to Rule Them All</title>
+				<link>http://localhost:1313/posts/on-abtraction-to-rule-them-all/</link>
+				<pubDate>Wed, 04 Nov 2026 19:33:10 +0100</pubDate>
+				<guid>http://localhost:1313/posts/on-abtraction-to-rule-them-all/</guid>
+				<description>&lt;p&gt;This year our industry has changed its paradigms. This year our industry had almost an overnight reinansce due to how AI agents make look our job different to what we used to do, however what we used to do that it was true before and it is not longer true? We kept losing ourselves in the &lt;code&gt;details&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;In the details is the evil&#xA;&amp;ldquo;Grandmas around the world&amp;rdquo;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;Details are what happens when we focus on something, it is the ingredient that makes a recipe an exquisite meal despite being hard to identify, it is the right angle where a picture turns from an ordinary picture into a national geographic highlited picture but details are also distractions.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Thinking: How to really stay in the loop</title>
 				<link>http://localhost:1313/posts/think-plan-then-implement/</link>
